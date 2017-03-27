@@ -1,0 +1,28 @@
+{
+	"global_updates": [
+		{
+			"text": "global update 1",
+		},
+		{
+			"text": "global update 2"
+		}
+	],
+	"updates": [
+		{
+			"text": "update 1",
+			"classes": [
+				"ח4",
+				"ט3"
+			]
+		},
+		{
+			"text": "update 2",
+			"classes": 
+			[
+				"ט2",
+				"יא7",
+				"ז11"
+			]
+		}
+	]
+}
