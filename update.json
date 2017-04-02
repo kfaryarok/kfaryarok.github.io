@@ -1,22 +1,22 @@
 {
 	"global_updates": [
 		{
-			"text": "global update 1",
+			"text": "עדכון כללי 1"
 		},
 		{
-			"text": "global update 2"
+			"text": "עדכון כללי 2"
 		}
 	],
 	"updates": [
 		{
-			"text": "update 1",
+			"text": "עדכון 1",
 			"classes": [
 				"ח4",
 				"ט3"
 			]
 		},
 		{
-			"text": "update 2",
+			"text": "עדכון 2",
 			"classes": 
 			[
 				"ט2",
