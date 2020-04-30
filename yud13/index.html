@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>לוח מבחנים מקוון</title>
+  <link rel="stylesheet" href="/bootstrap-min.css">
+  <link rel="stylesheet" href="/bootstrap-rtl.min.css">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body dir="rtl">
+  <header class="header container">
+    <h1><b>לוח מבחנים אינטראקטיבי</b></h1>
+    <h2>לכיתה י'13</h2>
+  </header>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-1"></div>
+      <div class="col-11">
+        <p>בחרו את המגמות שלכם ולחצו על כפתור "צור לוח מבחנים".</p>
+        <form>
+          <div class="form-group">
+            <legend>מגמות מאשכול א' (מדעים)</legend>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="phys">
+              <label class="form-check-label" for="phys">
+                פיזיקה
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="env">
+              <label class="form-check-label" for="env">
+                מדעי הסביבה
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <legend>מגמות מאשכול ב' (אמנויות)</legend>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="elec">
+              <label class="form-check-label" for="elec">
+                אלקטרוניקה
+              </label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="cs">
+              <label class="form-check-label" for="cs">
+                מדעי המחשב
+              </label>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-check">
+              <input class="form-check-input" type="checkbox" id="sci">
+              <label class="form-check-label" for="sci">
+                לומד/ת מדע וטכנולוגיה
+              </label>
+            </div>
+          </div>
+        </form>
+        <button class="btn btn-primary" onclick="ttparseTimetable()">צור לוח מבחנים!</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" id="result">
+    <table class="table" id="timetable">
+      <thead class="thead">
+        <tr>
+          <th scope="col">תאריך</th>
+          <th scope="col">מקצוע</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>ה 07.5</td>
+          <td>הבעה ולשון</td>
+        </tr>
+        <tr>
+          <td>א 10.5</td>
+          <td>מתמטיקה - לא מואץ</td>
+        </tr>
+        <tr>
+          <td>ג 12.5</td>
+          <td><b>חופש ל"ג בעומר</b></td>
+        </tr>
+        <tr class="tth computer">
+          <td>ד 13.5</td>
+          <td>מדעי המחשב</td>
+        </tr>
+        <tr class="tth electronic">
+          <td>ה 14.5</td>
+          <td>מערכות ספרתיות</td>
+        </tr>
+        <tr class="tth environment">
+          <td>א 17.5</td>
+          <td>מדעי הסביבה</td>
+        </tr>
+        <tr class="tth science">
+          <td>ג 19.5</td>
+          <td>מדע וטכנולוגיה</td>
+        </tr>
+        <tr class="tth physics">
+          <td>ה 21.5</td>
+          <td>פיזיקה</td>
+        </tr>
+        <tr>
+          <td>ב 25.5</td>
+          <td>היסטוריה</td>
+        </tr>
+        <tr class="tth electronic">
+          <td>ד 27.5</td>
+          <td>מבוא לאלקטרוניקה - <b>מתכונת</b></td>
+        </tr>
+        <tr class="tth computer">
+          <td>ד 27.5</td>
+          <td>אסמבלי - הצגת פרוייקטון סיום</td>
+        </tr>
+        <tr>
+          <td>ה 28.5</td>
+          <td><b>חופש שבועות</b></td>
+        </tr>
+        <tr>
+          <td>ב 01.6</td>
+          <td>אנגלית</td>
+        </tr>
+        <tr class="tth arabic">
+          <td>ה 04.6</td>
+          <td>ערבית - <b>בגרות בע"פ</b></td>
+        </tr>
+        <tr>
+          <td>א 07.6</td>
+          <td>מתמטיקה 3 - <b>מתכונת</b></td>
+        </tr>
+        <tr class="tth electronic">
+          <td>ב 08.6</td>
+          <td>מבוא לאלקטרוניקה - <b>בגרות</b></td>
+        </tr>
+        <tr>
+          <td>ה 11.6</td>
+          <td>מתמטיקה מואץ - <b>מתכונת</b></td>
+        </tr>
+        <tr>
+          <td>א 14.6</td>
+          <td>מתמטיקה 3 - <b>מתכונת</b></td>
+        </tr>
+        <tr>
+          <td>ד 17.6</td>
+          <td>מתמטיקה 3 - <b>בגרות</b></td>
+        </tr>
+        <tr>
+          <td>ה 18.6</td>
+          <td><b>חלוקת תעודות</b></td>
+        </tr>
+        <tr>
+          <td>ד 01.7</td>
+          <td>מתמטיקה מואץ - <b>בגרות</b></td>
+        </tr>
+        <tr>
+          <td>ב 27.7</td>
+          <td>מתמטיקה - <b>בגרות מועד ב'</b></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+
+  <footer class="footer container">
+    <p>&copy;רותם מוזס 2020. הקוד ניתן להפצה תחת רשיון MIT. ניתן להשיג אותו
+      <a href="https://github.com/kfaryarok/kfaryarok.github.io/">כאן</a>.</p>
+    <p dir="ltr" class="text-right">&copy; Rotem Moses 2020.
+      The code is available under the MIT license <a href="https://github.com/kfaryarok/kfaryarok.github.io/">here</a>.
+    </p>
+  </footer>
+  <script src="/jquery-3.5.0.min.js"></script>
+  <script src="/popper.min.js"></script>
+  <script src="/bootstrap.min.js"></script>
+  <script src="/content.js"></script>
+</body>
+
+</html>
