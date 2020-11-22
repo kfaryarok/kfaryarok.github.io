@@ -1,45 +1,177 @@
 <!DOCTYPE html>
-<html>
+<html lang="he">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>לוח מבחנים מקוון</title>
-  <link rel="stylesheet" href="/bootstrap-min.css">
-  <link rel="stylesheet" href="/bootstrap-rtl.min.css">
-  <link rel="stylesheet" href="/style.css">
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+  <title>לוח מבחנים לשכבה י"א</title>
 </head>
+
 <body dir="rtl">
-  
-  <header class="container header">
-    <h1>לוח מבחנים אינטראקטיבי</h1>
-    <p>בחרו את הכיתה שלכם:</p>
+  <header>
+    <div class="container">
+      <h1>לוח מבחנים אינטראקטיבי</h1>
+      <p>לוח מבחנים לשכבה י"א</p>
+    </div>
   </header>
+
   <div class="container">
-    <p><a href="/yud1/index.html">י1</a><p>
-    <p><a href="/yud2/index.html">י2</a><p>
-    <p><a href="/yud3/index.html">י3</a><p>
-    <p><a href="/yud4/index.html">י4</a><p>
-    <p><a href="/yud5/index.html">י5</a><p>
-    <p><a href="/yud6/index.html">י6</a><p>
-    <p><a href="/yud7/index.html">י7</a><p>
-    <p><a href="/yud8/index.html">י8</a><p>
-    <p><a href="/yud9/index.html">י9</a><p>
-    <p><a href="/yud10/index.html">י10</a><p>
-    <p><a href="/yud11/index.html">י11</a><p>
-    <p><a href="/yud12/index.html">י12</a><p>
-    <p><a href="/yud13/index.html">י13</a><p>
+    <form>
+      <div class="form-group">
+        <label for="classPicker">כיתה</label>
+        <select id="classPicker" class="form-control" onchange="classPicked()">
+          <option value="0">בחירת כיתה</option>
+          <option value="1">י"א 1</option>
+          <option value="2">י"א 2</option>
+          <option value="3">י"א 3</option>
+          <option value="4">י"א 4</option>
+          <option value="5">י"א 5</option>
+          <option value="6">י"א 6</option>
+          <option value="7">י"א 7</option>
+          <option value="8">י"א 8</option>
+          <option value="9">י"א 9</option>
+          <option value="10">י"א 10</option>
+          <option value="11">י"א 11</option>
+          <option value="12">י"א 12</option>
+          <option value="13">י"א 13</option>
+        </select>
+      </div>
+      <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-5">
+          <div class="form-group">
+            <input class="form-check-input" type="checkbox" value="" id="physics">
+            <label class="form-check-label" for="physics">
+              פיזיקה
+            </label>
+          </div>
+          <div class="form-group">
+            <input class="form-check-input" type="checkbox" value="" id="chemistry">
+            <label class="form-check-label" for="chemistry">
+              כימיה
+            </label>
+          </div>
+          <div class="form-group">
+            <input class="form-check-input" type="checkbox" value="" id="biology">
+            <label class="form-check-label" for="biology">
+              ביולוגיה
+            </label>
+          </div>
+          <div class="form-group">
+            <input class="form-check-input" type="checkbox" value="" id="philosophy">
+            <label class="form-check-label" for="philosophy">
+              מחשבת
+            </label>
+          </div>
+          <div class="form-group">
+            <input class="form-check-input" type="checkbox" value="" id="arabic">
+            <label class="form-check-label" for="arabic">
+              ערבית
+            </label>
+          </div>
+          <div class="form-group">
+            <input class="form-check-input" type="checkbox" value="" id="environment">
+            <label class="form-check-label" for="environment">
+              מדעי הסביבה
+            </label>
+          </div>
+          <div class="form-group">
+            <input class="form-check-input" type="checkbox" value="" id="social">
+            <label class="form-check-label" for="social">
+              מדעי החברה
+            </label>
+          </div>
+          <div class="form-group">
+            <input class="form-check-input" type="checkbox" value="" id="theater">
+            <label class="form-check-label" for="theater">
+              תיאטרון
+            </label>
+          </div>
+        </div>
+        <div class="col-md-5">
+          <div class="form-group">
+            <input class="form-check-input" type="checkbox" value="" id="computer">
+            <label class="form-check-label" for="computer">
+              הנדסת תוכנה
+            </label>
+          </div>
+          <div class="form-group">
+            <input class="form-check-input" type="checkbox" value="" id="health">
+            <label class="form-check-label" for="health">
+              רפואה
+            </label>
+          </div>
+          <div class="form-group">
+            <input class="form-check-input" type="checkbox" value="" id="electronics">
+            <label class="form-check-label" for="electronics">
+              אלקטרוניקה
+            </label>
+          </div>
+          <div class="form-group">
+            <input class="form-check-input" type="checkbox" value="" id="music">
+            <label class="form-check-label" for="music">
+              מוזיקה
+            </label>
+          </div>
+          <div class="form-group">
+            <input class="form-check-input" type="checkbox" value="" id="classical">
+            <label class="form-check-label" for="classical">
+              מוזיקה קלאסית
+            </label>
+          </div>
+          <div class="form-group">
+            <input class="form-check-input" type="checkbox" value="" id="agriculture">
+            <label class="form-check-label" for="agriculture">
+              ביולוגיה חקלאית
+            </label>
+          </div>
+          <div class="form-group">
+            <input class="form-check-input" type="checkbox" value="" id="arts">
+            <label class="form-check-label" for="arts">
+              אמנות
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-5"></div>
+        <div class="col-md-2">
+          <button class="btn btn-primary" type="button" onclick="click()">יצירת לוח</button>
+        </div>
+        <div class="col-md-5"></div>
+      </div>
+      <p></p>
+    </form>
   </div>
 
+  <div class="container">
+    <table class="table table-bordered table-hover">
+      <thead>
+        <tr>
+          <th>תאריך</th>
+          <th>אירוע</th>
+        </tr>
+      </thead>
+      <tbody id="tb">
+      </tbody>
+    </table>
+  </div>
 
-  <footer class="footer container">
-    <p>&copy;רותם מוזס 2020. הקוד ניתן להפצה תחת רשיון MIT. ניתן להשיג אותו
-      <a href="https://github.com/kfaryarok/kfaryarok.github.io/">כאן</a>.</p>
-    <p dir="ltr" class="text-right">&copy; Rotem Moses 2020.
-      The code is available under the MIT license <a href="https://github.com/kfaryarok/kfaryarok.github.io/">here</a>.</p>
-  </footer>
-  <script src="/jquery-3.5.0.min.js"></script>
-  <script src="/popper.min.js"></script>
-  <script src="/bootstrap.min.js"></script>
-  <script src="/content.js"></script>
+  <div class="container">
+    <footer>
+      <p>
+        הקוד שלי <a href="https://github.com/kfaryarok/kfaryarok.github.io">כאן!</a>
+      </p>
+    </footer>
+  </div>
+
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/content.js"></script>
 </body>
+
 </html>
