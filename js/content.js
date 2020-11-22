@@ -5,7 +5,7 @@ fetch(url)
   .then(result => events = JSON.parse(result));
 
 const checkboxes = [
-  "physics", "chemistry", "biology", "philosophy", "arabic", "environment", "social",
+  "physics", "chemistry", "biology", "philosophy", "arabic", "environment", "social", "history5",
   "computer", "health", "electronics", "music", "classical", "agriculture", "arts", "theater"
 ];
 
