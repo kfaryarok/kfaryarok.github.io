@@ -28,9 +28,9 @@ function generateTable() {
   eventsList.filter(predicate).forEach(e => {
     var name = e.name;
     if (e.type == "bagrut") {
-      name += " בגרות";
+      name += " - <b>בגרות</b>";
     } else if (e.type == "matkonet") {
-      name += " מתכונת";
+      name += " - <b>מתכונת</b>";
     }
     document.getElementById("tb").innerHTML = document.getElementById("tb").innerHTML + `<tr><td>${e.date}</td><td>${name}</td></tr>`;
   });
